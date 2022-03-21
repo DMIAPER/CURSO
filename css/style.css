@@ -576,6 +576,14 @@ footer .copyright{
 
 /* card página ventas */
 
+
+.fila.grid{
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 360px);
+    grid-gap: 1rem;
+    justify-content: center;
+}
 .card{
     width: 360px;
     border-radius: 0.5rem;
@@ -588,7 +596,6 @@ footer .copyright{
 
 .card img{
     height: 320px;
-
 }
 
 .card .footer-card{
@@ -621,4 +628,27 @@ footer .copyright{
 
 .card .footer-card a:hover{
     background-color: #755637;
+}
+
+/*Ficha de las propiedades*/
+.propiedad{
+    margin-top: 80px;
+    background-image: url("../img/property5.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.propiedad div:first-child{
+    background-color: rgba(255, 255, 255, 0.90);   
+}
+
+.propiedad div:first-child h1{
+    font-size: 1.4rem;    
+    color: #a97c50;
+}
+
+.propiedad div:first-child p img{
+    width: 28px;
+    height: 28px;
 }
