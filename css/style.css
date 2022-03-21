@@ -197,6 +197,7 @@ header.transparente nav a:hover{
     left: 1rem;
     cursor: pointer;
     z-index: 10;
+    display: none;
 }
 
 #burger .barra{
@@ -221,6 +222,19 @@ header.transparente nav a:hover{
 
 #burger.abierto .barra.inferior{
     transform: translateY(-8px) rotateZ(-45deg);
+}
+
+@media (max-width: 620px){
+    #burger{
+        display: block;
+    }
+    header{
+        justify-content: flex-end;
+    }
+
+    header nav{
+        display: none;
+    }
 }
 
 /* menu lateral*/
