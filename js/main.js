@@ -477,7 +477,8 @@ class Moto {
   modelo; //publica
   color; //publica
   precio; //publica
-  #numChasis;
+  #numChasis; //privada
+  #registro; //privada
 
   constructor(marcaIn, modeloIn, colorIn, precioIn) {
     this.marca = marcaIn;
@@ -486,13 +487,30 @@ class Moto {
     this.precio = precioIn;
   }
 
+  getMoto() {
+    return (
+      "Marca: " +
+      this.marca +
+      " - Marca: " +
+      this.modelo +
+      " - Color: " +
+      this.color +
+      " - Precio: " +
+      this.precio
+    );
+  }
+
+  getMarca() {
+    return this.marca;
+  }
+  getModelo() {
+    return this.modelo;
+  }
+
   getColor() {
     return this.color;
   }
 
-  setColor(color) {
-    this.color = color;
-  }
   getPrecio() {
     return this.precio;
   }
@@ -505,8 +523,22 @@ class Moto {
     return this.#numChasis;
   }
 
-  setNumChasis(numChasisIn) {
-    this.#numChasis = numChasisIn;
+  setColor(color) {
+    this.color = color;
+  }
+
+  setNumChasis(numChasis) {
+    this.#numChasis = numChasis;
+  }
+
+  //GET and SET otra forma
+
+  get registro() {
+    return this.#registro;
+  }
+
+  set registro(reg) {
+    this.#registro = reg;
   }
 }
 
@@ -521,6 +553,31 @@ moto1.setNumChasis("EE1258E82DA");
 
 console.log(moto1.getNumChasis());
 
+// GET and SET JS
+// - La diferencia es al nombrar y al inserar el valor
+
+moto1.registro = "Pedro Cruz Sánchez";
+console.log(moto1.registro); //No se le agregan parentesis solo el nombre del atributo.
+
+// Herencias de Clases de JavaScript
+
+class Triciclo extends Moto {
+  constructor(marcaIn, modeloIn, colorIn, precioIn, numRuedasIn) {
+    //Tributos heredados de la clase moto
+    super(marcaIn, modeloIn, colorIn, precioIn);
+    //Tributos propios
+    this.numRuedas = numRuedasIn;
+  }
+
+  //Mostrar tributos de la clase con herencia de la Clase moto
+  getTriciclo() {
+    return super.getMoto() + " - Número de ruedas: " + this.numRuedas;
+  }
+}
+
+let triciclo1 = new Triciclo("Kids", "tribike", "azul", 12.2, 3);
+
+console.log(triciclo1.getTriciclo());
 /*
 
 
