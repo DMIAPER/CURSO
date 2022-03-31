@@ -73,6 +73,10 @@
                 <img class="m-r-small" src="img/contract.svg" alt="">
                 Entrega inmediata.
             </p>
+
+            <p class="flex-end">
+                <button onclick="openModal()">Ver Imagenes</button>
+            </p>
         </div>
         <div class="col-50"></div>
     </div>
@@ -130,5 +134,39 @@
         </div>
     </footer>
 
+    <!--Carrusel-->
+    <div class="overlay"></div>
+    <div class="carrousel">
+        <div class="slide">
+            <img src="img/thumb2.jpg" alt="">
+        </div>
+        <div class="slide">
+            <img src="img/thumb3.jpg" alt="">
+        </div>
+        <div class="slide">
+            <img src="img/thumb4.jpg" alt="">
+        </div>
+        <div class="slide">
+            <img src="img/thumb5.jpg" alt="">
+        </div>
+        <div class="slide">
+            <img src="img/thumb6.jpg" alt="">
+        </div>
+        <div class="slide">
+            <img src="img/thumb8.jpg" alt="">
+        </div>
+        <div class="x-modal">
+            <img src="img/x.svg" onclick="clossModal()">
+        </div>
+        <div class="left-arrow">
+            <img src="img/left.svg" onclick="prevSlide()">
+        </div>
+        <div class="rigth-arrow">
+            <img src="img/right.svg" onclick="nextSlide()">
+        </div>
+
+    
+    </div>
+    <script src="js/carrousel.js"></script>
 </body>
 </html>
